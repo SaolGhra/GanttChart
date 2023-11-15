@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Gantt Chart Web App</h1>
+
+    <form method="post" action="/">
+        <label for="task">Task Name:</label>
+        <input type="text" name="task" required>
+
+        <label for="start">Start Time:</label>
+        <input type="number" name="start" required>
+
+        <label for="end">End Time:</label>
+        <input type="number" name="end" required>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    {% if chart_data %}
+        <div id="gantt-chart">
+            <img src="data:image/jpeg;base64,{{ chart_data }}" alt="Gantt Chart">
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('save_image') }}" class="btn btn-primary" role="button">Save as Image</a>
+            <a href="{{ url_for('export_excel') }}" class="btn btn-success" role="button">Export to Excel</a>
+        </div>
+    {% endif %}
+</body>
+</html>

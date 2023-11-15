@@ -1,0 +1,103 @@
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure full height of the viewport */
+}
+
+h1 {
+    color: #61dafb; /* React blue color */
+    padding: 20px;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #61dafb; /* React blue color */
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffffff;
+}
+
+button {
+    padding: 10px;
+    background-color: #61dafb; /* React blue color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #61dafb; /* React blue color */
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #61dafb; /* React blue color */
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #333;
+    color: #ffffff;
+}
+
+a:hover {
+    background-color: #61dafb; /* React blue color */
+    color: #ffffff;
+}
+
+/* Center the Gantt chart */
+#gantt-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Horizontal layout for task name and start/end time */
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.task-name {
+    margin-right: 10px;
+}
+
+.task-time {
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.btn {
+    margin-right: 10px;
+}
